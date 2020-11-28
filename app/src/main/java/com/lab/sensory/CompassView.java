@@ -13,7 +13,7 @@ public class CompassView extends View {
 
     public CompassView(Context context) {
         super(context);
-        paint.setColor(0xff00ff00);
+        paint.setColor(Color.BLUE);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(4);
         paint.setTextSize(40);
@@ -26,11 +26,11 @@ public class CompassView extends View {
 
         if (azimuth != null)
             canvas.rotate((float) (-azimuth * 360 / (2 * Math.PI)), centerX, centerY);
+
         paint.setColor(Color.BLUE);
         canvas.drawLine(centerX, centerY - 300, centerX, centerY + 300, paint);
         canvas.drawLine(centerX - 300, centerY, centerX + 300, centerY, paint);
         canvas.drawCircle(centerX, centerY, 250, paint);
-
 
         canvas.drawText("S", centerX, centerY + 350, paint);
         canvas.drawText("W", centerX - 350, centerY, paint);

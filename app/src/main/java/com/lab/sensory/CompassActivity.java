@@ -36,7 +36,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
 
     private void setSensors() {
         if (mSensorManager == null || accelerometer == null || magnetometer == null) {
-            mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+            mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
             accelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
             magnetometer = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
         }
@@ -51,7 +51,9 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         mSensorManager.unregisterListener(this);
     }
 
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {  }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        //do nothing
+    }
 
     public void onSensorChanged(SensorEvent event) {
         setSensorValues(event);
