@@ -4,14 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".DataViewer">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="openDataViewer"
-        android:text="DataViewer"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="182dp" />
 </android.support.constraint.ConstraintLayout>
