@@ -12,8 +12,19 @@
         android:layout_height="46dp"
         android:layout_marginTop="36dp"
         android:onClick="openDataViewer"
-        android:text="DataViewer"
+        android:text="Accelerometer Data"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="409dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="32dp"
+        android:onClick="openCompass"
+        android:text="Compass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 </android.support.constraint.ConstraintLayout>

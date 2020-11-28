@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DataViewer.class);
         startActivity(intent);
     }
+
+    public void openCompass(View view) {
+        Intent intent = new Intent(this, CompassActivity.class);
+        startActivity(intent);
+    }
 }
