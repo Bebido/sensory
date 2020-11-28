@@ -8,7 +8,7 @@ import android.view.View;
 
 public class CompassView extends View {
 
-    Float azimuth;  // View to draw a compass
+    Float azimuth;
     Paint paint = new Paint();
 
     public CompassView(Context context) {
@@ -27,11 +27,19 @@ public class CompassView extends View {
         if (azimuth != null)
             canvas.rotate((float) (-azimuth * 360 / (2 * Math.PI)), centerX, centerY);
 
+        drawLines(canvas, centerX, centerY);
+        drawSymbols(canvas, centerX, centerY);
+    }
+
+    private void drawLines(Canvas canvas, int centerX, int centerY) {
         paint.setColor(Color.BLUE);
         canvas.drawLine(centerX, centerY - 300, centerX, centerY + 300, paint);
         canvas.drawLine(centerX - 300, centerY, centerX + 300, centerY, paint);
         canvas.drawCircle(centerX, centerY, 250, paint);
+    }
 
+    private void drawSymbols(Canvas canvas, int centerX, int centerY) {
+        paint.setColor(Color.BLUE);
         canvas.drawText("S", centerX, centerY + 350, paint);
         canvas.drawText("W", centerX - 350, centerY, paint);
         canvas.drawText("E", centerX + 350, centerY, paint);
